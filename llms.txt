@@ -1,0 +1,46 @@
+# Thirumalai Viswa B — Full-Stack & AI Engineer
+
+> Architecting intelligent mobile apps, reactive web platforms, and data pipelines built for real-world impact. Based in Coimbatore, Tamil Nadu, India.
+
+## Profile Summary
+Thirumalai Viswa B is a Full-Stack and AI Developer with hands-on experience delivering client-ready digital platforms and native mobile solutions. He bridges theoretical mathematics and machine learning with production code, responsive architectures, and offline-first database systems.
+
+## Core Specializations
+- **AI & Data Engineering**: Predictive models, exploratory data analytics, and pipeline engineering with Python and Scikit-learn.
+- **Web Development**: Responsive modern interfaces, ES6+ JavaScript, Django backends, and high-performance client sites.
+- **Mobile Applications**: Native Android apps built in Java with offline-first Room SQLite storage and crash-resilient lifecycles.
+
+## Tech Stack & Arsenal
+- **Languages**: Python (Data & AI Scripting), Java (Android Native OOP), JavaScript (ES6+ Dynamic DOM), SQL, HTML5, CSS3
+- **Frameworks & Libraries**: Django (Python Full-Stack), Tailwind CSS, Vanilla CSS
+- **Mobile Development**: Android Studio (Native Build Engine), Room SQLite (Local Persistence)
+- **Databases**: PostgreSQL (Relational Schemas), SQLite
+- **Intelligence & Analytics**: Scikit-Learn (ML Algorithms), Pandas, NumPy
+- **Tooling & Environments**: Git, GitHub, REST APIs, Linux/Unix
+
+## Featured Projects
+- **Mango Accounts (Android App)**: Offline-first Android application for daily harvest auditing, category categorization, and automatic yield percentage calculations across harvest cycles. Uses Java and Room DB.
+- **Attendance App (Android App)**: High-reliability mobile utility engineered for instant classroom session check-ins, student roster tracking, and automated percentage calculation with zero server dependency.
+- **Tourist Discovery (Web Platform)**: Experiential travel portal featuring glassmorphism navigation, dynamic destination carousels, and an interactive itinerary reservation model.
+- **Hari Enterprises (Web Platform)**: High-performance enterprise web portal engineered with modern responsive multi-device layouts, fast catalog search, and client-side interactions for solid wood furniture.
+- **IHA Restaurant (Web Platform)**: Adaptive digital brand platform delivering seamless responsiveness across mobile and ultra-wide screens with interactive showcase modules.
+
+## Experience
+- **Web Developer Intern** — RankYouHigher (3 Months)
+  - Shipped client-ready digital storefronts directly to production, optimizing cross-browser performance, responsiveness, and conversion UX with strict deadlines.
+  - Achieved a 100% client delivery rate across verified production deployments.
+
+## Education & Certifications
+- **B.Sc. Computer Science (Artificial Intelligence & Data Science)**
+  - Rathinam College of Arts and Science · Affiliated with Bharathiar University (2024 — 2027)
+  - CGPA: 7.6
+- **AI & AI Tools Certification**
+  - Indian Institute of Technology (IIT) Chennai (April 2025)
+  - Intensive training in applied generative systems, neural networks, and prompt engineering paradigms.
+
+## Contact & Links
+- **Email**: thirumalaiviswa37@gmail.com
+- **GitHub**: https://github.com/viswamani776
+- **LinkedIn**: https://www.linkedin.com/in/thirumalai-viswa-b-783533342/
+- **Phone**: +91 9965652612
+

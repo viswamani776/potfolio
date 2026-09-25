@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Thirumalai Viswa B — Full-Stack &amp; AI Engineer</title>
+  <meta name="description"
+    content="Full-Stack &amp; AI Engineer specializing in Python, Django, Android, and high-performance reactive web platforms. Explore craft, production systems, and code!">
+  <link rel="canonical" href="https://thirumalaiviswab.in/">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-[#08080a] text-on-surface font-body-md antialiased relative min-h-screen">
+  <!-- Interactive Dynamic Cursor Glow Spotlight -->
+  <div id="cursor-glow"></div>
+  <!-- Interactive Background Canvas (Constellation & Nodes) -->
+  <canvas class="fixed inset-0 pointer-events-none z-0" id="ambient-canvas"></canvas>
+  <!-- Ambient Color Gradients -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div
+      class="absolute -top-[15%] left-1/2 -translate-x-1/2 w-[850px] h-[550px] ambient-gradient-top blur-[140px] rounded-full">
+    </div>
+    <div class="absolute top-[45%] -right-40 w-[600px] h-[600px] ambient-gradient-right blur-[160px] rounded-full">
+    </div>
+    <div class="absolute top-[70%] -left-40 w-[600px] h-[600px] ambient-gradient-left blur-[160px] rounded-full"></div>
+  </div>
+  <!-- ULTRA-MINIMAL FLOATING GLASS NAVBAR -->
+  <header class="fixed top-5 inset-x-0 z-50 px-4 md:px-8">
+    <div
+      class="max-w-6xl mx-auto flex items-center justify-between py-2 px-4 md:px-6 rounded-full bg-[#0c0d12]/70 backdrop-blur-2xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.7)]">
+      <a class="flex items-center gap-2.5 group" href="#home"><span
+          class="font-headline-sm text-sm sm:text-base font-bold tracking-tight text-white whitespace-nowrap group-hover:text-primary transition-colors leading-none flex items-center gap-1.5">Thirumalai
+          Viswa <span class="text-primary">B</span></span></a>
+      <nav
+        class="hidden md:flex items-center gap-1 font-mono text-xs tracking-[0.14em] uppercase text-on-surface-variant">
+        <a class="px-3.5 py-1.5 rounded-full hover:text-primary transition-colors" href="#about">Specialization</a><a
+          class="px-3.5 py-1.5 rounded-full hover:text-primary transition-colors" href="#projects">Creations</a><a
+          class="px-3.5 py-1.5 rounded-full hover:text-primary transition-colors" href="#tech">Core</a><a
+          class="px-3.5 py-1.5 rounded-full hover:text-primary transition-colors" href="#contact">Connect</a>
+      </nav>
+      <div class="flex items-center gap-3"><a
+          class="group relative px-5 py-2 rounded-full overflow-hidden text-xs font-headline-sm font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-1.5 btn-initiate"
+          href="#contact"><span class="material-symbols-outlined text-sm font-bold">chat</span><span>CONNECT</span></a>
+      </div>
+    </div>
+  </header>
+  <main class="relative z-10 w-full pt-28">
+    <!-- ========================================================================= -->
+    <!-- 1. HERO SECTION: KINETIC, PUNCHY, HIGH-IMPACT -->
+    <!-- ========================================================================= -->
+    <section class="relative min-h-[88vh] max-w-6xl mx-auto px-6 md:px-10 flex flex-col justify-center pt-8 pb-16"
+      id="home">
+      <!-- Cybernetic Meta Stream -->
+      <div
+        class="flex items-center justify-between border-b border-white/[0.08] pb-4 mb-10 text-[11px] font-mono text-on-surface-variant tracking-[0.25em]">
+        <div class="flex items-center gap-3">
+          <span class="text-primary font-bold">+</span>
+          <span class="text-white uppercase tracking-widest">VISWA B // PORTFOLIO</span>
+          <span class="text-white/20">|</span>
+          <span class="hidden sm:inline">COIMBATORE, TN</span>
+        </div>
+        <div class="flex items-center gap-2 text-primary font-bold">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span>FULL-STACK &amp; AI</span>
+        </div>
+      </div>
+      <!-- Kinetic Typographic Headline -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12">
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <span
+            class="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-primary mb-3 flex items-center gap-2">
+            <span class="w-6 h-[2px] bg-primary"></span> SYSTEM DESIGN &amp; INTELLIGENCE
+          </span>
+          <h1
+            class="text-4xl sm:text-6xl lg:text-[76px] font-headline-xl font-extrabold tracking-tighter uppercase leading-[0.92] text-white mb-6">
+            THIRUMALAI<br>
+            <span class="hero-title-gradient">
+              VISWA B
+            </span>
+          </h1>
+          <p class="text-base sm:text-lg font-light text-on-surface-variant leading-snug mb-6 max-w-xl">
+            Architecting intelligent mobile apps, reactive web platforms, and data pipelines built for real-world
+            impact.
+          </p>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span
+              class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[14px] text-primary">school</span> CGPA 7.6
+            </span>
+            <span
+              class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[14px] text-secondary">bolt</span> Live Intern
+            </span>
+            <span
+              class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-white flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[14px] text-primary">rocket_launch</span> 3+ Shipped
+            </span>
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-xs sm:max-w-sm flex flex-col items-center">
+            <div
+              class="absolute -top-3 -right-3 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-primary/40 text-[10px] font-mono text-primary shadow-xl backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>AVAILABLE FOR HIRE</span>
+            </div>
+            <div
+              class="absolute -bottom-3 -left-3 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-white/20 text-[10px] font-mono text-white shadow-xl backdrop-blur-md">
+              <span class="material-symbols-outlined text-xs text-primary">code</span><span>VISWA // AI &amp; WEB</span>
+            </div>
+            <div class="relative w-full aspect-[3/4] flex items-center justify-center">
+              <div
+                class="absolute inset-0 pointer-events-none rounded-full blur-3xl opacity-40 -z-10 portrait-ambient-glow">
+              </div><img alt="Thirumalai Viswa B Portrait Cutout"
+                class="w-full h-full object-contain object-bottom portrait-photo" src="assets/viswa_portrait.avif">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Action Triggers -->
+      <div class="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-white/[0.08]">
+        <div class="flex flex-wrap items-center gap-4">
+          <a class="group inline-flex items-center gap-3 px-8 py-3.5 rounded-full font-headline-sm text-xs font-bold uppercase tracking-widest btn-primary-glow hover:scale-105 transition-all duration-300"
+            href="#projects">
+            <span>EXPLORE CRAFT</span>
+            <span
+              class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/10 font-mono text-xs uppercase tracking-wider transition-all"
+            href="#contact">
+            <span>GET IN TOUCH</span>
+          </a>
+        </div>
+        <a class="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors"
+          href="#about">
+          <span>DISCOVERY</span>
+          <span class="material-symbols-outlined text-sm animate-bounce">arrow_downward</span>
+        </a>
+      </div>
+    </section>
+    <!-- KINETIC SCROLLING SKILL MARQUEE TICKER -->
+    <div class="relative w-full py-4 border-y border-white/[0.07] bg-white/[0.015] overflow-hidden">
+      <div
+        class="flex whitespace-nowrap animate-ticker font-mono text-xs uppercase tracking-[0.3em] text-on-surface-variant/80">
+        <span class="mx-6 text-primary flex items-center gap-2"><span
+            class="w-1.5 h-1.5 rounded-full bg-primary"></span> MACHINE LEARNING</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-white">ANDROID STUDIO &amp; JAVA</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-secondary flex items-center gap-2"><span
+            class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ROOM SQLITE CACHE</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-white">DJANGO FULL-STACK</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-primary flex items-center gap-2"><span
+            class="w-1.5 h-1.5 rounded-full bg-primary"></span> REACTIVE WEB DESIGN</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-white">PYTHON SCI-KIT &amp; PANDAS</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-primary flex items-center gap-2"><span
+            class="w-1.5 h-1.5 rounded-full bg-primary"></span> MACHINE LEARNING</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-white">ANDROID STUDIO &amp; JAVA</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-secondary flex items-center gap-2"><span
+            class="w-1.5 h-1.5 rounded-full bg-secondary"></span> ROOM SQLITE CACHE</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-white">DJANGO FULL-STACK</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-primary flex items-center gap-2"><span
+            class="w-1.5 h-1.5 rounded-full bg-primary"></span> REACTIVE WEB DESIGN</span>
+        <span class="mx-6">·</span>
+        <span class="mx-6 text-white">PYTHON SCI-KIT &amp; PANDAS</span>
+      </div>
+    </div>
+    <!-- ========================================================================= -->
+    <!-- 2. STREAMLINED FOCUS CARDS (ABOUT) -->
+    <!-- ========================================================================= -->
+    <section class="relative max-w-6xl mx-auto px-6 md:px-10 py-24" id="about">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-2 block">01 // SPECIALIZED
+            PILLARS</span>
+          <h2 class="text-4xl sm:text-5xl font-headline-xl font-bold uppercase tracking-tight text-white">
+            I BUILD. I EXPLORE. I LEARN.
+          </h2>
+        </div>
+        <p class="text-sm font-mono text-on-surface-variant max-w-xs">
+          Rathinam College ('24-'27) · Bharathiar Univ. Transforming theoretical math into real production code.
+        </p>
+      </div>
+      <!-- 3 Sleek Dynamic Focus Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: AI & Data -->
+        <div
+          class="group relative p-8 rounded-2xl bg-surface/80 border border-white/10 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-8">
+              <span
+                class="text-4xl font-headline-xl font-extrabold text-stroke-minimal group-hover:text-primary/30 transition-colors">01</span>
+              <div
+                class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#00282d] transition-all">
+                <span class="material-symbols-outlined text-lg">neurology</span>
+              </div>
+            </div>
+            <h3
+              class="text-2xl font-headline-md font-bold uppercase text-white mb-2 group-hover:text-primary transition-colors">
+              AI &amp; DATA</h3>
+            <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-6">
+              Predictive models, exploratory data analytics, and pipeline engineering with Python &amp; Scikit-learn.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06] font-mono text-[10px] text-primary">
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Python</span>
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Scikit-Learn</span>
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Pandas</span>
+          </div>
+        </div>
+        <!-- Card 2: Web Dev -->
+        <div
+          class="group relative p-8 rounded-2xl bg-surface/80 border border-white/10 hover:border-secondary/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-secondary/[0.04] to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-8">
+              <span
+                class="text-4xl font-headline-xl font-extrabold text-stroke-minimal group-hover:text-secondary/30 transition-colors">02</span>
+              <div
+                class="w-10 h-10 rounded-full border border-secondary/30 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-[#2b0052] transition-all">
+                <span class="material-symbols-outlined text-lg">web</span>
+              </div>
+            </div>
+            <h3
+              class="text-2xl font-headline-md font-bold uppercase text-white mb-2 group-hover:text-secondary transition-colors">
+              WEB DEV</h3>
+            <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-6">
+              Responsive modern interfaces, ES6+ JavaScript, Django backends, and high-performance client sites.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06] font-mono text-[10px] text-secondary">
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Django</span>
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Tailwind CSS</span>
+          </div>
+        </div>
+        <!-- Card 3: Mobile Apps -->
+        <div
+          class="group relative p-8 rounded-2xl bg-surface/80 border border-white/10 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-8">
+              <span
+                class="text-4xl font-headline-xl font-extrabold text-stroke-minimal group-hover:text-primary/30 transition-colors">03</span>
+              <div
+                class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-[#00282d] transition-all">
+                <span class="material-symbols-outlined text-lg">phone_android</span>
+              </div>
+            </div>
+            <h3
+              class="text-2xl font-headline-md font-bold uppercase text-white mb-2 group-hover:text-primary transition-colors">
+              MOBILE APPS</h3>
+            <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-6">
+              Native Android apps built in Java with offline-first Room SQLite storage and crash-resilient lifecycles.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.06] font-mono text-[10px] text-primary">
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Android Studio</span>
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Java OOP</span>
+            <span class="px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/5">Room DB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- 3. CONDENSED EXPERIENCE: HIGH-IMPACT METRICS -->
+    <!-- ========================================================================= -->
+    <section class="relative max-w-6xl mx-auto px-6 md:px-10 py-16 border-t border-white/[0.08]" id="experience">
+      <div
+        class="p-8 md:p-10 rounded-3xl bg-surface/60 border border-white/10 relative overflow-hidden backdrop-blur-xl">
+        <div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8">
+            <div class="flex items-center gap-3 mb-3 font-mono text-xs">
+              <span
+                class="px-3 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary font-bold uppercase">
+                PRODUCTION INTERNSHIP
+              </span>
+              <span class="text-on-surface-variant">2025 · 3 MONTHS</span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-headline-lg font-bold text-white uppercase tracking-tight mb-2">
+              WEB DEVELOPER INTERN
+            </h3>
+            <div class="text-secondary font-mono text-sm font-semibold mb-4">RankYouHigher</div>
+            <p class="text-base text-on-surface-variant leading-relaxed max-w-2xl">
+              Shipped client-ready digital storefronts directly to production, optimizing cross-browser performance,
+              responsiveness, and conversion UX with strict deadlines.
+            </p>
+          </div>
+          <div class="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-10">
+            <div class="text-5xl sm:text-6xl font-headline-xl font-extrabold text-primary mb-1">100%</div>
+            <div class="text-xs font-mono uppercase tracking-widest text-white mb-4">Client Delivery Rate</div>
+            <div class="text-xs font-mono text-on-surface-variant flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Verified Production Deployments
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- 4. SELECTED PROJECTS WITH REAL MOBILE APP IMAGES (KINETIC FLOATING FRAMES) -->
+    <!-- ========================================================================= -->
+    <section class="relative max-w-6xl mx-auto px-6 md:px-10 py-24 border-t border-white/[0.08]" id="projects">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-2 block">02 // CRAFT &amp;
+            SYSTEMS</span>
+          <h2 class="text-4xl sm:text-5xl font-headline-xl font-bold uppercase tracking-tight text-white">
+            FEATURED CRAFT
+          </h2>
+        </div>
+        <p class="text-sm font-mono text-on-surface-variant">
+          PRODUCTION-GRADE TOOLS ENGINEERED FOR TANGIBLE ENTERPRISES.
+        </p>
+      </div>
+      <div class="space-y-36">
+        <!-- ================= PROJECT 01: MANGO ACCOUNTS ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Text Info -->
+          <div class="lg:col-span-6 flex flex-col order-2 lg:order-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-4xl font-headline-xl font-extrabold text-stroke-minimal">01</span>
+              <span
+                class="text-xs font-mono uppercase px-3 py-1 rounded-full border border-primary/30 text-primary bg-primary/[0.05]">
+                Android Utility · Family Farm Operation
+              </span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-headline-lg font-bold uppercase text-white tracking-tight mb-4">
+              MANGO ACCOUNTS
+            </h3>
+            <p class="text-base text-on-surface-variant font-light leading-relaxed mb-6">
+              Replaced lost paper logs with a reliable offline-first Android app for daily harvest audits, variety
+              categorization, and automatic yield metrics across harvest cycles.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Daily Harvest Logs</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Room DB Offline Store</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Variety Breakdown</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Zero Data Loss</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">Android
+                Studio</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">Java
+                OOP</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">Room
+                SQLite</span>
+            </div>
+            <div>
+              <a class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary hover:text-white transition-colors group"
+                href="#contact">
+                <span class="border-b border-primary pb-0.5">EXAMINE REPOSITORY &amp; ARCHITECTURE</span>
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <!-- Phone Mockup with REAL APP IMAGE: MANGO ACCOUNTS -->
+          <div class="lg:col-span-6 flex justify-center order-1 lg:order-2">
+            <div class="relative group animate-float">
+              <!-- Ambient Cyan Glow Ring behind phone -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-primary/30 to-emerald-400/20 rounded-[50px] blur-2xl opacity-60 group-hover:opacity-90 transition-opacity">
+              </div>
+              <!-- Floating Telemetry Badges -->
+              <div
+                class="absolute -top-4 -left-6 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-primary/40 text-[11px] font-mono text-primary shadow-xl backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>14,820 KG LOGGED</span>
+              </div>
+              <div
+                class="absolute -bottom-4 -right-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-white/20 text-[10px] font-mono text-white shadow-xl backdrop-blur-md">
+                <span class="material-symbols-outlined text-xs text-primary">cloud_off</span>
+                <span>OFFLINE PERSISTED</span>
+              </div>
+              <!-- Sleek Mobile Bezel Container -->
+              <div
+                class="relative w-[280px] sm:w-[320px] aspect-[9/18.5] rounded-[48px] p-3 bg-[#181820] border-[3px] border-white/20 phone-glass-bezel overflow-hidden">
+                <!-- Phone Screen with real Image -->
+                <div class="w-full h-full rounded-[38px] overflow-hidden relative bg-black">
+                  <img alt="Mango Accounts agricultural harvest dashboard UI"
+                    class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                    src="assets/portfolio_reference_2.avif">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ================= PROJECT 02: ATTENDANCE APP ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Phone Mockup with REAL APP IMAGE: ATTENDANCE APP -->
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="relative group animate-float-delayed">
+              <!-- Ambient Purple/Cyan Glow behind phone -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-accent-purple/35 to-primary/20 rounded-[50px] blur-2xl opacity-60 group-hover:opacity-90 transition-opacity">
+              </div>
+              <!-- Floating Telemetry Badges -->
+              <div
+                class="absolute -top-4 -right-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-secondary/40 text-[11px] font-mono text-secondary shadow-xl backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span>94.2% ATTENDANCE</span>
+              </div>
+              <div
+                class="absolute -bottom-4 -left-6 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-white/20 text-[10px] font-mono text-white shadow-xl backdrop-blur-md">
+                <span class="material-symbols-outlined text-xs text-secondary">verified_user</span>
+                <span>ROSTER VERIFIED</span>
+              </div>
+              <!-- Sleek Mobile Bezel Container -->
+              <div
+                class="relative w-[280px] sm:w-[320px] aspect-[9/18.5] rounded-[48px] p-3 bg-[#181820] border-[3px] border-white/20 phone-glass-purple overflow-hidden">
+                <!-- Phone Screen with real Image -->
+                <div class="w-full h-full rounded-[38px] overflow-hidden relative bg-black">
+                  <img alt="Attendance App campus student audit UI"
+                    class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                    src="assets/portfolio_reference_1.avif">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Text Info -->
+          <div class="lg:col-span-6 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-4xl font-headline-xl font-extrabold text-stroke-minimal">02</span>
+              <span
+                class="text-xs font-mono uppercase px-3 py-1 rounded-full border border-secondary/30 text-secondary bg-secondary/[0.05]">
+                Android Application · Campus System
+              </span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-headline-lg font-bold uppercase text-white tracking-tight mb-4">
+              ATTENDANCE APP
+            </h3>
+            <p class="text-base text-on-surface-variant font-light leading-relaxed mb-6">
+              A high-reliability mobile utility engineered for instant classroom session check-ins, student roster
+              tracking, and automated percentage calculation with zero server dependency.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Fast Roster Auditing</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Dynamic % Calculation</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Local SQLite Cache</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Instant Check-In State</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Android
+                Studio</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Java</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Room
+                Database</span>
+            </div>
+            <div>
+              <a class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-secondary hover:text-white transition-colors group"
+                href="#contact">
+                <span class="border-b border-secondary pb-0.5">EXAMINE REPOSITORY &amp; ARCHITECTURE</span>
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ================= PROJECT 03: TOURIST WEBSITE ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-6 flex flex-col order-2 lg:order-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-4xl font-headline-xl font-extrabold text-stroke-minimal">03</span>
+              <span
+                class="text-xs font-mono uppercase px-3 py-1 rounded-full border border-primary/30 text-primary bg-primary/[0.05]">
+                Responsive Web App · Oct 2025
+              </span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-headline-lg font-bold uppercase text-white tracking-tight mb-4">
+              TOURIST DISCOVERY
+            </h3>
+            <p class="text-base text-on-surface-variant font-light leading-relaxed mb-6">
+              An experiential travel portal featuring responsive glassmorphism navigation, dynamic destination
+              carousels, and an interactive itinerary reservation model.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Dynamic Carousels</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Glass Nav Header</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Interactive Filters</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Booking Form Model</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">HTML5
+                / CSS3</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">JavaScript
+                ES6</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">UI/UX
+                Prototype</span>
+            </div>
+            <div>
+              <a class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary hover:text-white transition-colors group"
+                href="#contact">
+                <span class="border-b border-primary pb-0.5">LAUNCH BROWSER PROTOTYPE</span>
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <!-- Browser Mockup -->
+          <div class="lg:col-span-6 flex justify-center order-1 lg:order-2">
+            <div class="relative group w-full max-w-lg">
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-primary/30 to-secondary/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity">
+              </div>
+              <div
+                class="absolute -top-4 -right-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-primary/40 text-[11px] font-mono text-primary shadow-xl backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span>LIVE SYSTEM PREVIEW</span>
+              </div>
+              <div
+                class="absolute -bottom-4 -left-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-secondary/40 text-[10px] font-mono text-secondary shadow-xl backdrop-blur-md">
+                <span class="material-symbols-outlined text-xs text-secondary">explore</span><span>DYNAMIC WEATHER &amp;
+                  ROUTING</span>
+              </div>
+              <div
+                class="relative rounded-2xl border border-white/15 bg-surface/90 backdrop-blur-2xl shadow-2xl overflow-hidden group-hover:border-primary/40 transition-colors">
+                <div class="flex items-center justify-between px-4 py-3 bg-white/[0.03] border-b border-white/[0.08]">
+                  <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-500/70"></span><span
+                      class="w-3 h-3 rounded-full bg-yellow-500/70"></span><span
+                      class="w-3 h-3 rounded-full bg-emerald-500/70"></span></div>
+                  <div
+                    class="px-4 py-0.5 rounded-full bg-black/40 border border-white/5 font-mono text-[11px] text-on-surface-variant flex items-center gap-1.5">
+                    <span
+                      class="material-symbols-outlined text-xs text-primary">lock</span><span>explore-tamilnadu.web.app</span>
+                  </div>
+                  <div class="w-10"></div>
+                </div>
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-[#131313] group/screen"><img
+                    src="assets/tourist_discovery_high_quality.avif"
+                    alt="Explore More Places in Tamil Nadu Tourist Discovery Portal"
+                    class="w-full h-full object-cover scale-[1.08] origin-center transition-transform duration-500 group-hover/screen:scale-110">
+                  <div
+                    class="absolute top-0 left-0 w-16 h-12 bg-black/60 backdrop-blur-md z-10 pointer-events-none rounded-br-xl border-r border-b border-white/10 opacity-0">
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
+                  </div>
+                  <div class="absolute bottom-3 inset-x-3 flex items-center justify-between pointer-events-none"><span
+                      class="text-[10px] font-mono uppercase tracking-wider text-primary px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-primary/30 flex items-center gap-1.5"><span
+                        class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>EXPLORE TAMIL NADU</span><span
+                      class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">TAMIL
+                      NADU, INDIA</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ================= PROJECT 04: HARI ENTERPRISES ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Phone/Browser Mockup Frame -->
+          <div class="lg:col-span-6 flex justify-center order-1 lg:order-1">
+            <div class="relative group w-full max-w-lg">
+              <!-- Ambient Glow -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-primary/30 to-secondary/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity">
+              </div>
+              <!-- Floating Telemetry Badges -->
+              <div
+                class="absolute -top-4 -left-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-primary/40 text-[11px] font-mono text-primary shadow-xl backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span>99.9% UPTIME</span>
+              </div>
+              <div
+                class="absolute -bottom-4 -right-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-secondary/40 text-[10px] font-mono text-secondary shadow-xl backdrop-blur-md">
+                <span class="material-symbols-outlined text-xs text-secondary">devices</span>
+                <span>MULTI-DEVICE SYNC</span>
+              </div>
+              <!-- Sleek Browser Frame -->
+              <div
+                class="relative rounded-2xl border border-white/15 bg-surface/90 backdrop-blur-2xl shadow-2xl overflow-hidden group-hover:border-primary/40 transition-colors">
+                <div class="flex items-center justify-between px-4 py-3 bg-white/[0.03] border-b border-white/[0.08]">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <div
+                    class="px-4 py-0.5 rounded-full bg-black/40 border border-white/5 font-mono text-[11px] text-on-surface-variant flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-xs text-primary">lock</span>
+                    <span>harifurnitures.in</span>
+                  </div>
+                  <div class="w-10"></div>
+                </div>
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-[#181512] group/screen"><img
+                    src="assets/hari_enterprises_high_quality.avif" alt="Hari Enterprises Solid Wood Furniture Website"
+                    class="w-full h-full object-cover object-left-top scale-[1.04] origin-top-right transition-transform duration-500 group-hover/screen:scale-105">
+                  <div class="absolute top-0 left-0 w-12 h-10 bg-[#1e1c19] z-10 pointer-events-none"></div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
+                  </div>
+                  <div class="absolute bottom-3 inset-x-3 flex items-center justify-between pointer-events-none"><span
+                      class="text-[10px] font-mono uppercase tracking-wider text-primary px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-primary/30 flex items-center gap-1.5"><span
+                        class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>LIVE SYSTEM PREVIEW</span><span
+                      class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">KOTTAKULAM,
+                      TENKASI</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Text Info -->
+          <div class="lg:col-span-6 flex flex-col order-2 lg:order-2">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-4xl font-headline-xl font-extrabold text-stroke-minimal">04</span>
+              <span
+                class="text-xs font-mono uppercase px-3 py-1 rounded-full border border-primary/30 text-primary bg-primary/[0.05]">
+                RESPONSIVE WEB PLATFORM // COMMERCE &amp; CATALOG
+              </span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-headline-lg font-bold uppercase text-white tracking-tight mb-4">
+              HARI ENTERPRISES
+            </h3>
+            <p class="text-base text-on-surface-variant font-light leading-relaxed mb-6">
+              High-performance enterprise web portal engineered with modern architecture, responsive multi-device
+              layouts (desktop &amp; mobile optimized), fast search discovery, and sleek client-side interactions.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Desktop &amp; Mobile Responsive</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Fast Catalog Engine</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Interactive Inquiries</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                <span>Vanilla JS / Tailwind</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">Responsive
+                Web</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">JavaScript
+                ES6+</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">Tailwind
+                CSS</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Enterprise
+                UI</span>
+            </div>
+            <div>
+              <a class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-primary hover:text-white transition-colors group"
+                href="#contact">
+                <span class="border-b border-primary pb-0.5">LAUNCH PORTAL ARCHITECTURE</span>
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ================= PROJECT 05: IHA ================= -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Text Info -->
+          <div class="lg:col-span-6 flex flex-col order-2 lg:order-1">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-4xl font-headline-xl font-extrabold text-stroke-minimal">05</span>
+              <span
+                class="text-xs font-mono uppercase px-3 py-1 rounded-full border border-secondary/30 text-secondary bg-secondary/[0.05]">
+                RESPONSIVE WEB ECOSYSTEM // SERVICES &amp; SHOWCASE
+              </span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-headline-lg font-bold uppercase text-white tracking-tight mb-4">
+              IHA
+            </h3>
+            <p class="text-base text-on-surface-variant font-light leading-relaxed mb-6">
+              Adaptive digital brand platform delivering seamless responsiveness across mobile and ultra-wide screens,
+              glassmorphic interactive modules, optimized load speeds, and intuitive customer engagement funnels.
+            </p>
+            <div class="grid grid-cols-2 gap-3 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Mobile-First Responsive</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Fluid Breakpoints</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>Interactive Showcase</span>
+              </div>
+              <div class="flex items-center gap-2 text-white">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span>SEO &amp; Performance Tuned</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Mobile-First</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Interactive
+                UX</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-secondary px-3 py-1 rounded-full border border-secondary/20 bg-secondary/[0.04]">Performance
+                99+</span>
+              <span
+                class="text-[11px] font-mono uppercase tracking-wider text-primary px-3 py-1 rounded-full border border-primary/20 bg-primary/[0.04]">Glassmorphism</span>
+            </div>
+            <div>
+              <a class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-secondary hover:text-white transition-colors group"
+                href="#contact">
+                <span class="border-b border-secondary pb-0.5">EXPLORE WEB PLATFORM</span>
+                <span
+                  class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <!-- Browser / Showcase Card Frame -->
+          <div class="lg:col-span-6 flex justify-center order-1 lg:order-2">
+            <div class="relative group w-full max-w-lg">
+              <!-- Ambient Purple & Gold Glow -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-secondary/30 via-accent-purple/35 to-primary/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity">
+              </div>
+              <!-- Telemetry Badges -->
+              <div
+                class="absolute -top-4 -right-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0d0d12]/80 border border-secondary/40 text-[11px] font-mono text-secondary shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-secondary/70">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="tracking-wider">100%
+                  FLUID RESPONSIVE</span>
+              </div>
+              <div
+                class="absolute -bottom-4 -left-4 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0d0d12]/90 border border-white/20 text-[10px] font-mono text-white shadow-xl backdrop-blur-md">
+                <span class="material-symbols-outlined text-xs text-secondary">speed</span>
+                <span>LIGHTSPEED LOAD &lt;0.8S</span>
+              </div>
+              <!-- Sleek Luxury Glass Container -->
+              <div
+                class="relative rounded-2xl border border-white/15 bg-surface/90 backdrop-blur-2xl shadow-2xl overflow-hidden group-hover:border-secondary/40 transition-colors">
+                <div class="flex items-center justify-between px-4 py-3 bg-white/[0.03] border-b border-white/[0.08]">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/70"></span>
+                  </div>
+                  <div
+                    class="px-4 py-0.5 rounded-full bg-black/40 border border-white/5 font-mono text-[11px] text-on-surface-variant flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-xs text-secondary">lock</span>
+                    <span>ihagroups.in</span>
+                  </div>
+                  <div class="w-10"></div>
+                </div>
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-[#131313] group/screen"><img
+                    src="assets/iha_restaurant_high_quality.avif" alt="IHA Restaurant Web Platform Showcase"
+                    class="w-full h-full object-cover object-top scale-[1.04] origin-top-right transition-transform duration-500 group-hover/screen:scale-105">
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
+                  </div>
+                  <div class="absolute bottom-3 inset-x-3 flex items-center justify-between pointer-events-none"><span
+                      class="text-[10px] font-mono uppercase tracking-wider text-secondary px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-secondary/30 flex items-center gap-1.5"><span
+                        class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>LIVE SYSTEM
+                      PREVIEW</span><span
+                      class="text-[10px] font-mono text-white/80 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">COIMBATORE,
+                      TN</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- 5. STREAMLINED ARSENAL & TECH STACK -->
+    <!-- ========================================================================= -->
+    <section class="relative max-w-6xl mx-auto px-6 md:px-10 py-20 border-t border-white/[0.08]" id="tech">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-2 block">03 // CORE ARSENAL</span>
+          <h2 class="text-4xl sm:text-5xl font-headline-xl font-bold uppercase tracking-tight text-white">
+            TECH STACK
+          </h2>
+        </div>
+        <span class="font-mono text-xs text-on-surface-variant">ENGINEERED FOR SCALABILITY &amp; SPEED</span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-primary/40 transition-colors">
+          <span class="text-[10px] font-mono text-primary uppercase block mb-2">LANGUAGE</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">Python</div>
+          <div class="text-xs font-mono text-on-surface-variant">Data &amp; AI Scripting</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-primary/40 transition-colors">
+          <span class="text-[10px] font-mono text-primary uppercase block mb-2">LANGUAGE</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">Java</div>
+          <div class="text-xs font-mono text-on-surface-variant">Android Native OOP</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-secondary/40 transition-colors">
+          <span class="text-[10px] font-mono text-secondary uppercase block mb-2">WEB FRONTEND</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">JavaScript</div>
+          <div class="text-xs font-mono text-on-surface-variant">ES6+ Dynamic DOM</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-secondary/40 transition-colors">
+          <span class="text-[10px] font-mono text-secondary uppercase block mb-2">BACKEND</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">Django</div>
+          <div class="text-xs font-mono text-on-surface-variant">Python Full-Stack</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-primary/40 transition-colors">
+          <span class="text-[10px] font-mono text-primary uppercase block mb-2">MOBILE IDE</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">Android Studio</div>
+          <div class="text-xs font-mono text-on-surface-variant">Native Build Engine</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-primary/40 transition-colors">
+          <span class="text-[10px] font-mono text-primary uppercase block mb-2">DATABASE</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">Room SQLite</div>
+          <div class="text-xs font-mono text-on-surface-variant">Local Mobile Persistence</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-secondary/40 transition-colors">
+          <span class="text-[10px] font-mono text-secondary uppercase block mb-2">DATABASE</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">PostgreSQL</div>
+          <div class="text-xs font-mono text-on-surface-variant">ACID Relational Schemas</div>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface/70 border border-white/10 hover:border-secondary/40 transition-colors">
+          <span class="text-[10px] font-mono text-secondary uppercase block mb-2">INTELLIGENCE</span>
+          <div class="text-lg font-headline-sm font-bold text-white mb-1">Scikit-Learn</div>
+          <div class="text-xs font-mono text-on-surface-variant">ML Algorithms &amp; Models</div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- 6. SLEEK ACADEMICS & RECOGNITIONS -->
+    <!-- ========================================================================= -->
+    <section class="relative max-w-6xl mx-auto px-6 md:px-10 py-20 border-t border-white/[0.08]" id="academics">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Degree -->
+        <div class="lg:col-span-7 p-8 rounded-3xl bg-surface/60 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs mb-3">
+              <span class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">DEGREE</span>
+              <span class="text-white font-bold">2024 — 2027</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-headline-lg font-bold uppercase text-white mb-1">
+              B.SC. COMPUTER SCIENCE
+            </h3>
+            <p class="text-sm font-mono text-primary mb-4">ARTIFICIAL INTELLIGENCE &amp; DATA SCIENCE</p>
+            <p class="text-xs text-on-surface-variant leading-relaxed mb-6">
+              Rathinam College of Arts and Science · Affiliated to Bharathiar University.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-white/[0.08]">
+            <span class="text-xs font-mono text-on-surface-variant uppercase">EVALUATION METRIC</span>
+            <span class="text-3xl font-headline-lg font-extrabold text-primary">CGPA 7.6</span>
+          </div>
+        </div>
+        <!-- IIT Workshop -->
+        <div class="lg:col-span-5 p-8 rounded-3xl bg-surface/60 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between font-mono text-xs mb-3">
+              <span
+                class="px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20">WORKSHOP</span>
+              <span class="text-white font-bold">APRIL 2025</span>
+            </div>
+            <h3 class="text-2xl font-headline-lg font-bold uppercase text-white mb-1">
+              AI &amp; AI TOOLS
+            </h3>
+            <p class="text-sm font-mono text-secondary mb-4">IIT CHENNAI</p>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+              Intensive training program exploring modern generative systems, applied neural networks, and prompt
+              engineering paradigms.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-4 border-t border-white/[0.08] font-mono text-xs text-secondary">
+            <span class="material-symbols-outlined text-sm">workspace_premium</span>
+            <span>Indian Institute of Technology Accreditation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- 7. MANIFESTO BANNER -->
+    <!-- ========================================================================= -->
+    <section class="relative py-24 overflow-hidden border-y border-white/[0.08]">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <span class="text-xs font-mono uppercase tracking-[0.4em] text-primary block mb-4">MANIFESTO</span>
+        <h2
+          class="text-4xl sm:text-6xl lg:text-[76px] font-headline-xl font-extrabold uppercase tracking-tighter leading-[0.95] text-white">
+          CURIOUS BY NATURE.<br>
+          PRACTICAL BY APPROACH.<br>
+          <span class="manifesto-gradient">
+            ALWAYS BUILDING.
+          </span>
+        </h2>
+      </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- 8. STREAMLINED CONTACT TELEMETRY -->
+    <!-- ========================================================================= -->
+    <section class="relative max-w-6xl mx-auto px-6 md:px-10 py-24" id="contact">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-2 block">04 // INITIATE
+            TRANSMISSION</span>
+          <h2 class="text-4xl sm:text-5xl font-headline-xl font-bold uppercase tracking-tight text-white">
+            LET'S BUILD SOMETHING.
+          </h2>
+        </div>
+        <p class="text-sm font-mono text-on-surface-variant">
+          READY FOR FULL-STACK &amp; AI OPPORTUNITIES. REACH OUT DIRECTLY.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Direct Links -->
+        <div class="lg:col-span-5 space-y-4">
+          <a class="flex items-center justify-between p-5 rounded-2xl bg-surface/60 border border-white/10 hover:border-primary/50 transition-colors group"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=thirumalaiviswa37@gmail.com" rel="noopener noreferrer"
+            target="_blank">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">mail</span>
+              <div>
+                <span class="text-[10px] font-mono text-on-surface-variant uppercase block">GMAIL</span>
+                <span
+                  class="text-sm font-headline-sm font-bold text-white group-hover:text-primary transition-colors">thirumalaiviswa37@gmail.com</span>
+              </div>
+            </div>
+            <span
+              class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+          </a>
+          <a class="flex items-center justify-between p-5 rounded-2xl bg-surface/60 border border-white/10 hover:border-secondary/50 transition-colors group"
+            href="https://linkedin.com/in/thirumalai-viswa-b-783533342" rel="noopener noreferrer" target="_blank">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary text-xl">share</span>
+              <div>
+                <span class="text-[10px] font-mono text-on-surface-variant uppercase block">LINKEDIN</span>
+                <span
+                  class="text-sm font-headline-sm font-bold text-white group-hover:text-secondary transition-colors">thirumalai-viswa-b</span>
+              </div>
+            </div>
+            <span
+              class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-secondary group-hover:translate-x-1 transition-all">arrow_forward</span>
+          </a>
+          <a class="flex items-center justify-between p-5 rounded-2xl bg-surface/60 border border-white/10 hover:border-primary/50 transition-colors group"
+            href="https://github.com/viswamani776" rel="noopener noreferrer" target="_blank">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">code</span>
+              <div>
+                <span class="text-[10px] font-mono text-on-surface-variant uppercase block">GITHUB</span>
+                <span
+                  class="text-sm font-headline-sm font-bold text-white group-hover:text-primary transition-colors">viswamani776</span>
+              </div>
+            </div>
+            <span
+              class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+          </a>
+          <a class="flex items-center justify-between p-5 rounded-2xl bg-surface/60 border border-white/10 hover:border-primary/50 transition-colors group"
+            href="tel:+919965652612">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-xl">call</span>
+              <div>
+                <span class="text-[10px] font-mono text-on-surface-variant uppercase block">MOBILE</span>
+                <span
+                  class="text-sm font-headline-sm font-bold text-white group-hover:text-primary transition-colors">+91&nbsp;9965652612</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-mono text-primary px-2.5 py-0.5 rounded-full border border-primary/20">TAMIL
+                NADU</span>
+              <span
+                class="material-symbols-outlined text-sm text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
+            </div>
+          </a>
+        </div>
+        <!-- Sleek Contact Form -->
+        <div class="lg:col-span-7 p-8 rounded-3xl bg-surface/60 border border-white/10">
+          <form class="space-y-6" id="contact-form" action="contact.php" method="POST">
+            <!-- Honeypot spam trap -->
+            <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="text-[11px] font-mono uppercase tracking-[0.2em] text-primary block mb-2"
+                  for="name">NAME</label>
+                <input
+                  class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 font-body-md focus:border-primary focus:ring-0 transition-colors text-sm"
+                  id="name" name="name" placeholder="Your name" required type="text">
+              </div>
+              <div>
+                <label class="text-[11px] font-mono uppercase tracking-[0.2em] text-primary block mb-2"
+                  for="email">EMAIL</label>
+                <input
+                  class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 font-body-md focus:border-primary focus:ring-0 transition-colors text-sm"
+                  id="email" name="email" placeholder="your@email.com" required type="email">
+              </div>
+            </div>
+            <div>
+              <label class="text-[11px] font-mono uppercase tracking-[0.2em] text-primary block mb-2"
+                for="message">MESSAGE</label>
+              <textarea
+                class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 font-body-md focus:border-primary focus:ring-0 transition-colors text-sm resize-none"
+                id="message" name="message" placeholder="What would you like to build together?" required
+                rows="3"></textarea>
+            </div>
+            <button id="submit-btn"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-full font-headline-sm text-xs font-bold uppercase tracking-widest btn-primary-glow transition-all flex items-center justify-center gap-2 cursor-pointer"
+              type="submit">
+              <span id="submit-btn-text">TRANSMIT MESSAGE</span>
+              <span class="material-symbols-outlined text-sm" id="submit-btn-icon">send</span>
+            </button>
+            <div
+              class="hidden p-3 rounded-xl border border-primary/30 bg-primary/[0.05] text-center font-mono text-xs text-primary"
+              id="feedback">
+              ✓ Transmission received. Thirumalai Viswa will respond promptly.
+            </div>
+            <div
+              class="hidden p-3 rounded-xl border border-red-500/30 bg-red-500/[0.08] text-center font-mono text-xs text-red-400"
+              id="feedback-error">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- MINIMAL FOOTER -->
+  <footer class="relative z-10 w-full border-t border-white/[0.08] py-10 bg-[#060608]">
+    <div
+      class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-on-surface-variant">
+      <div>© 2026 Thirumalai Viswa B · All Rights Reserved.</div>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-primary transition-colors" href="https://github.com/viswamani776" rel="noopener noreferrer"
+          target="_blank">GitHub</a>
+        <a class="hover:text-secondary transition-colors"
+          href="https://www.linkedin.com/in/thirumalai-viswa-b-783533342/" rel="noopener noreferrer"
+          target="_blank">LinkedIn</a>
+        <a class="hover:text-primary transition-colors"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=thirumalaiviswa37@gmail.com" rel="noopener noreferrer"
+          target="_blank">Gmail</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

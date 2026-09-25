@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thirumalaiviswab.in/sitemap.xml

@@ -10,6 +10,8 @@
  * - Backup storage in messages.json
  */
 
+require_once __DIR__ . '/smtp.php';
+
 session_start();
 
 // Generate CSRF token if not set
@@ -17,8 +19,10 @@ if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
 
-$recipient_email = "thirumalaiviswa37@gmail.com";
+$recipient_email = defined('SMTP_RECIPIENT') ? SMTP_RECIPIENT : "thirumalaiviswa37@gmail.com";
 $messages_log_file = __DIR__ . "/messages.json";
+$smtp_user = defined('SMTP_USER') ? SMTP_USER : "thirumalaiviswa37@gmail.com";
+$smtp_pass = defined('SMTP_PASS') ? SMTP_PASS : "";
 
 // Form variables initialization
 $name = "";
@@ -90,23 +94,54 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             // Email details
             $mail_subject = "[Contact Form] " . $clean_subject;
-            $body = "New message received from your website form:\n\n";
-            $body .= "Date: " . $timestamp . "\n";
-            $body .= "Name: " . $name . "\n";
-            $body .= "Email: " . $email . "\n";
-            $body .= "Subject: " . $subject_input . "\n\n";
-            $body .= "Message:\n" . $message . "\n";
+            $body_html = buildContactEmailHtml(
+                $name,
+                $email,
+                $mail_subject,
+                $message,
+                $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+                date("F j, Y, g:i a")
+            );
 
-            $headers = [
-                'MIME-Version: 1.0',
-                'Content-type: text/plain; charset=utf-8',
-                'From: ' . $recipient_email,
-                'Reply-To: ' . $email,
-                'X-Mailer: PHP/' . phpversion()
-            ];
+            $mail_sent = false;
+            $mail_error = null;
 
-            // Send email (mail function)
-            $mail_sent = @mail($recipient_email, $mail_subject, $body, implode("\r\n", $headers));
+            if (!empty($smtp_pass)) {
+                try {
+                    $from_name = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : 'Thirumalai Viswa Portfolio';
+                    $mail_sent = sendSmtpMail(
+                        $recipient_email,
+                        $mail_subject,
+                        $body_html,
+                        $email,
+                        $smtp_user,
+                        $smtp_pass,
+                        defined('SMTP_HOST') ? SMTP_HOST : 'smtp.gmail.com',
+                        defined('SMTP_PORT') ? SMTP_PORT : 587,
+                        $from_name,
+                        $name
+                    );
+                } catch (Exception $e) {
+                    $mail_error = $e->getMessage();
+                    error_log("Google SMTP Send Failed (form.php): " . $mail_error);
+
+                    // Fallback to PHP mail()
+                    $fallback_headers  = "MIME-Version: 1.0\r\n";
+                    $fallback_headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+                    $fallback_headers .= "From: <$recipient_email>\r\n";
+                    $fallback_headers .= "Reply-To: <$email>\r\n";
+                    $fallback_headers .= "X-Mailer: PHP/" . phpversion();
+                    $mail_sent = @mail($recipient_email, $mail_subject, $body_html, $fallback_headers);
+                }
+            } else {
+                $fallback_headers  = "MIME-Version: 1.0\r\n";
+                $fallback_headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+                $fallback_headers .= "From: <$recipient_email>\r\n";
+                $fallback_headers .= "Reply-To: <$email>\r\n";
+                $fallback_headers .= "X-Mailer: PHP/" . phpversion();
+                $mail_sent = @mail($recipient_email, $mail_subject, $body_html, $fallback_headers);
+                $mail_error = "SMTP_PASS is not set in smtp.php or environment variables.";
+            }
 
             // Log entry into JSON file as persistence backup
             $log_entry = [
@@ -117,7 +152,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 'subject' => $subject_input,
                 'message' => $message,
                 'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
-                'mail_sent' => (bool)$mail_sent
+                'mail_sent' => (bool)$mail_sent,
+                'mail_error' => $mail_error
             ];
 
             $logs = [];
@@ -145,6 +181,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WXFM5RKP');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Form — PHP</title>
@@ -173,15 +216,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
       }
     }
-  </script>
-  <style>
-    .glow-gold:focus {
-      border-color: #f59e0b;
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#08080c] text-zinc-100 min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-10 font-sans selection:bg-amber-500 selection:text-black">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFM5RKP" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <div class="w-full max-w-2xl bg-[#111118] border border-white/10 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden backdrop-blur-xl">
     

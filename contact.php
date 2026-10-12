@@ -4,15 +4,21 @@
  * Handles AJAX requests and standard POST form submissions securely.
  */
 
+require_once __DIR__ . '/smtp.php';
+
 // Enable session for CSRF protection
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
 // Configuration
-$recipient_email = "thirumalaiviswa37@gmail.com";
+$recipient_email = defined('SMTP_RECIPIENT') ? SMTP_RECIPIENT : "thirumalaiviswa37@gmail.com";
 $email_subject_prefix = "[Portfolio Inquiry] from ";
 $messages_log_file = __DIR__ . "/messages.json";
+
+// Google SMTP credentials (set in smtp.php, via environment variables, or override here)
+$smtp_user = defined('SMTP_USER') ? SMTP_USER : "thirumalaiviswa37@gmail.com";
+$smtp_pass = defined('SMTP_PASS') ? SMTP_PASS : "";
 
 // Helper function to send JSON response
 function sendJsonResponse($success, $message, $errors = []) {
@@ -112,26 +118,59 @@ $clean_email = filter_var($email, FILTER_SANITIZE_EMAIL);
 $clean_message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 $timestamp = date("Y-m-d H:i:s");
 
-// 1. Prepare and send email
+// 1. Prepare and send email via Google SMTP (TLS/Socket)
 $subject = $email_subject_prefix . $clean_name;
-$email_body = "New Contact Form Transmission:\n\n";
-$email_body .= "Date/Time: " . $timestamp . "\n";
-$email_body .= "Name: " . $name . "\n";
-$email_body .= "Email: " . $email . "\n";
-$email_body .= "IP Address: " . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown') . "\n\n";
-$email_body .= "Message:\n" . $message . "\n";
+$body_html = buildContactEmailHtml(
+    $name,
+    $email,
+    $subject,
+    $message,
+    $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+    date("F j, Y, g:i a")
+);
 
-$headers = [];
-$headers[] = 'MIME-Version: 1.0';
-$headers[] = 'Content-type: text/plain; charset=utf-8';
-$headers[] = 'From: ' . $recipient_email;
-$headers[] = 'Reply-To: ' . $email;
-$headers[] = 'X-Mailer: PHP/' . phpversion();
+$mail_sent = false;
+$mail_error = null;
 
-// Attempt sending email via mail()
-$mail_sent = @mail($recipient_email, $subject, $email_body, implode("\r\n", $headers));
+if (!empty($smtp_pass)) {
+    try {
+        $from_name = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : 'Thirumalai Viswa Portfolio';
+        $mail_sent = sendSmtpMail(
+            $recipient_email,
+            $subject,
+            $body_html,
+            $email,
+            $smtp_user,
+            $smtp_pass,
+            defined('SMTP_HOST') ? SMTP_HOST : 'smtp.gmail.com',
+            defined('SMTP_PORT') ? SMTP_PORT : 587,
+            $from_name,
+            $name
+        );
+    } catch (Exception $e) {
+        $mail_error = $e->getMessage();
+        error_log("Google SMTP Send Failed: " . $mail_error);
 
-// 2. Backup log to messages.json (so messages are never lost if mail server is offline)
+        // Fallback to PHP mail() if local mail agent is available
+        $fallback_headers  = "MIME-Version: 1.0\r\n";
+        $fallback_headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+        $fallback_headers .= "From: <$recipient_email>\r\n";
+        $fallback_headers .= "Reply-To: <$email>\r\n";
+        $fallback_headers .= "X-Mailer: PHP/" . phpversion();
+        $mail_sent = @mail($recipient_email, $subject, $body_html, $fallback_headers);
+    }
+} else {
+    // Fallback if SMTP_PASS is not configured yet
+    $fallback_headers  = "MIME-Version: 1.0\r\n";
+    $fallback_headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $fallback_headers .= "From: <$recipient_email>\r\n";
+    $fallback_headers .= "Reply-To: <$email>\r\n";
+    $fallback_headers .= "X-Mailer: PHP/" . phpversion();
+    $mail_sent = @mail($recipient_email, $subject, $body_html, $fallback_headers);
+    $mail_error = "SMTP_PASS is not set in smtp.php or environment variables.";
+}
+
+// 2. Backup log to messages.json (so messages are never lost)
 $log_entry = [
     'id' => uniqid('msg_', true),
     'timestamp' => $timestamp,
@@ -139,7 +178,8 @@ $log_entry = [
     'email' => $email,
     'message' => $message,
     'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
-    'mail_sent' => (bool)$mail_sent
+    'mail_sent' => (bool)$mail_sent,
+    'mail_error' => $mail_error
 ];
 
 $existing_logs = [];

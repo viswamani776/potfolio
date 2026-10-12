@@ -1,3 +1,6 @@
 .DS_Store
 messages.json
 *.log
+.env
+*.env
+credentials.php

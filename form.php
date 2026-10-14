@@ -221,7 +221,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body class="bg-[#08080c] text-zinc-100 min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-10 font-sans selection:bg-amber-500 selection:text-black">
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFM5RKP" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFM5RKP" height="0" width="0" class="gtm-iframe" title="Google Tag Manager"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
